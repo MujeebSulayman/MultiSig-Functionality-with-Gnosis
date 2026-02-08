@@ -15,7 +15,7 @@ export const deploy = async (HemSig: string, args: Array<any>, accountIndex?: nu
   const artifactsPath = `browser/artifacts/${HemSig}.json` // Change this for different path
 
   const metadata = JSON.parse(await remix.call('fileManager', 'getFile', artifactsPath))
-  // 'web3Provider' is a remix global variable object
+  
 
   const signer = (new ethers.providers.Web3Provider(web3Provider)).getSigner(accountIndex)
 
