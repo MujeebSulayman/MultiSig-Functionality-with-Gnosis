@@ -23,7 +23,6 @@ export const deploy = async (HemSig: string, args: Array<any>, accountIndex?: nu
 
   const contract = await factory.deploy(...args)
 
-  // The contract is NOT deployed yet; we must wait until it is mined
   await contract.deployed()
   return contract
 }
